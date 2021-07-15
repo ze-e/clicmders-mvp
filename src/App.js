@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Popup from './components/Popup/Popup';
 import {textGenApiKey as ApiKey} from './config/config';
 import deepai from 'deepai';
-import {getGoatText }from "./util/text-gen-api"
+import {getText }from "./util/text-gen-api"
 
 import Data from './data/data';
 import {GoatPics} from './data/goatPics';
@@ -15,24 +15,34 @@ function App() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [DATA, setData] = React.useState(Data);
 
+  const [subtitle, setSubtitle] = React.useState('Here are some of my goats. You can add your own goats, too!');
+
+  React.useEffect(()=>{
+    getSubtitle();
+  },[])
+
   function toggleClose(){
     setIsOpen(!isOpen);
   }
 
   async function submitForm(name, food, activity){
-    console.log(DATA);
-     getGoatText({name, food, activity})
+     getText(`This is my goat. Their name is ${name}. They like to eat ${food} and they love to ${activity}`)
     .then((resp)=>{
-      const newItem = {title:name,description:processText(resp.output),img:randomGoatImage()};
-      console.log(newItem);
+      const newItem = {title:name,description:processText(resp.output,7),img:randomGoatImage()};
       setData([...DATA, newItem]);
-      console.log(DATA);
       toggleClose();
     })
   }
 
-  function processText(text){
-    return text.split('.').slice(0,7).join('.') + '.';
+  async function getSubtitle(){
+    getText(`Here are some of my goats. You can add your own goats, too!`)
+   .then((resp)=>{
+      setSubtitle(processText(resp.output,3));
+   })
+ }
+
+  function processText(text, length){
+    return text.split('.').slice(0,length).join('.') + '.';
   }
 
   function randomGoatImage(){
@@ -44,7 +54,7 @@ function App() {
       <Header />
       <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
       <Popup isOpen={isOpen} handleClose={toggleClose} handleSubmit={submitForm}/>
-      <Gallery items={DATA}/>
+      <Gallery items={DATA} subtitle={subtitle}/>
     </div>
   );
 }
