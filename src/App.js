@@ -3,9 +3,7 @@ import './App.css';
 import Gallery from './components/Gallery/Gallery';
 import Header from './components/Header/Header';
 import Popup from './components/Popup/Popup';
-import {textGenApiKey as ApiKey} from './config/config';
-import deepai from 'deepai';
-import {getText }from "./util/text-gen-api"
+import {getText}from "./util/text-gen-api"
 
 import Data from './data/data';
 import {GoatPics} from './data/goatPics';
