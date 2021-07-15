@@ -32,7 +32,7 @@ function App() {
   }
 
   function processText(text){
-    return text.split('.').slice(0,5).join('.') + '.';
+    return text.split('.').slice(0,7).join('.') + '.';
   }
 
   function randomGoatImage(){
