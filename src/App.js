@@ -1,8 +1,9 @@
+import React from 'react';
 import './App.css';
-import './components/Gallery';
-import './components/Header';
-import './components/Popup';
-import Data from './data/data.json';
+import Gallery from './components/Gallery/Gallery';
+import Header from './components/Header/Header';
+import Popup from './components/Popup/Popup';
+import Data from './data/data';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
     <div className="App">
       <Header />
       <Gallery items={Data}/>
-      <button className="add-button">Add a new goat!</button>
+      <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
       <Popup handleClose={toggleClose} isOpen={isOpen} handleClose={submitForm}/>
     </div>
   );

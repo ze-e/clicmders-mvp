@@ -1,7 +1,9 @@
+import React from 'react';
+
 function PopupWithForm(props) {
 
   const [name, setName] = React.useState('Billy');
-  const [color, setColor] = React.useState('#000000');
+  const [color, setColor] = React.useState('#a67a2e');
   const [food, setFood] = React.useState('Barley');
   const [activity, setActivity] = React.useState('Walking around aimlessly');
 
@@ -23,10 +25,10 @@ function PopupWithForm(props) {
 
 
   return (
-    <section className={`${props.isOpen  && 'popup_state_opened'}`} >
+    <section className={`popup ${props.isOpen  && 'popup_opened'}`} >
       <div className="popup__container">
       <form className="popup__form" onSubmit={props.handleSubmit}>
-        <button className="popup__close" type="button" onClick={props.handleClose}></button>  
+        <button className="popup__close" type="button" onClick={props.handleClose}>X</button>  
           <h4 className="popup__title">Create a goat:</h4>
           
           <p className="popup__input-label">Goat name:</p>
