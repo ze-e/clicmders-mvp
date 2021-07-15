@@ -3,4 +3,5 @@
   grid-gap: 18px;
   grid-template-columns:repeat(auto-fit, minmax(282px, 1fr));
   margin: auto;
+  list-style: none;
 }

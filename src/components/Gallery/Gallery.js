@@ -1,17 +1,22 @@
+import React from 'react';
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 function Gallery(props){
-  
+
+  React.useEffect(()=>{
+    console.log(props.items);
+  })
+
   return(
     <>
     <h2 className="gallery__title">My Goats:</h2>
-    <div className="gallery__grid">
-      {props.items.length > 0 ? props.items.map((item,index)=>{
-        <div className="gallery-item" key={index}>
-          <GalleryItem item={item}></GalleryItem>
-        </div>
-      }):<p className="gallery__loading">Loading goats . . . </p>}
-   </div> 
+    <ul className="gallery__grid">
+      {props.items.length > 0 ? props.items.map((item,index)=>
+        <li className="gallery-item" key={index}>
+          <GalleryItem item={item}/>
+        </li>
+      ):<p className="gallery__loading">Loading goats . . . </p>}
+   </ul> 
     </>
   )
 }

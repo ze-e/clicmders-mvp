@@ -13,16 +13,17 @@ function App() {
     setIsOpen(!isOpen);
   }
 
-  function submitForm(){
+  function submitForm(e){
+    e.preventDefault();
     toggleClose();
   }
 
   return (
     <div className="App">
       <Header />
-      <Gallery items={Data}/>
       <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
-      <Popup handleClose={toggleClose} isOpen={isOpen} handleClose={submitForm}/>
+      <Popup isOpen={isOpen} handleClose={toggleClose} handleSubmit={submitForm}/>
+      <Gallery items={Data}/>
     </div>
   );
 }
