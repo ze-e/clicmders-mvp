@@ -4,8 +4,8 @@ function PopupWithForm(props) {
 
   const [name, setName] = React.useState('Billy');
   const [color, setColor] = React.useState('#a67a2e');
-  const [food, setFood] = React.useState('Barley');
-  const [activity, setActivity] = React.useState('Walking around aimlessly');
+  const [food, setFood] = React.useState('barley');
+  const [activity, setActivity] = React.useState('walk around aimlessly');
 
   function handleName(e) {
     setName(e.target.value);

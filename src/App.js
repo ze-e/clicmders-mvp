@@ -8,20 +8,12 @@ import deepai from 'deepai';
 import {getGoatText }from "./util/text-gen-api"
 
 import Data from './data/data';
+import {GoatPics} from './data/goatPics';
 
 function App() {
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [DATA, setData] = React.useState(Data);
-
-// const getGoatText = async ( {name, food, activity}) => {
-//     deepai.setApiKey(ApiKey);
-//     const resp = await deepai.callStandardApi("text-generator", {
-//             text: `My goat is brown. Their name is ${name}. They like to eat ${food} and they love to ${activity}`,
-//     });
-//     console.log(resp.output, "my ooutpouusuasu");
-//     return resp; 
-//   }
 
   function toggleClose(){
     setIsOpen(!isOpen);
@@ -31,12 +23,20 @@ function App() {
     console.log(DATA);
      getGoatText({name, food, activity})
     .then((resp)=>{
-      console.log(resp);
-      const newItem = {name,description:resp.output,img:"https://images.unsplash.com/photo-1588466585717-f8041aec7875"};
+      const newItem = {title:name,description:processText(resp.output),img:randomGoatImage()};
+      console.log(newItem);
       setData([...DATA, newItem]);
       console.log(DATA);
       toggleClose();
     })
+  }
+
+  function processText(text){
+    return text.split('.').slice(0,5).join('.') + '.';
+  }
+
+  function randomGoatImage(){
+    return GoatPics[Math.floor(Math.random()*GoatPics.length)];
   }
 
   return (
@@ -44,7 +44,7 @@ function App() {
       <Header />
       <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
       <Popup isOpen={isOpen} handleClose={toggleClose} handleSubmit={submitForm}/>
-      <Gallery items={Data}/>
+      <Gallery items={DATA}/>
     </div>
   );
 }
