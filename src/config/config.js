@@ -1,0 +1,1 @@
+export const textGenApiKey = "bfe346d5-d922-4d77-8d64-d9cd596381f7";
