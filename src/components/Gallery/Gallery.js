@@ -4,7 +4,7 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 function Gallery(props){
 
   React.useEffect(()=>{
-    console.log(props.items);
+    // console.log(props.items);
   })
 
   return(
