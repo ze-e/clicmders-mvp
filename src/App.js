@@ -28,11 +28,7 @@ function App() {
   async function submitForm(name, food, activity){
      getText(`This is my goat. Their name is ${name}. They like to eat ${food} and they love to ${activity}`)
     .then((resp)=>{
-<<<<<<< HEAD
-      const newItem = {name, description:resp.output, img:"https://images.unsplash.com/photo-1588466585717-f8041aec7875"};
-=======
       const newItem = {title:name,description:processText(resp.output,7),img:randomGoatImage()};
->>>>>>> dev
       setData([...DATA, newItem]);
       toggleClose();
     })
