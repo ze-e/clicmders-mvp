@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## Terry's goat blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About Me:
+Hi! I'm Terry. Here's a few cool facts about me:
 
-## Available Scripts
+- listens to a lot of podcasts on history & politics
+- reads sci-fi
+- runs a TikTok blog of his pet goat
+- volunteers at an animal shelter
+- enjoys gardening
+- is into calligraphy & embroidery (likes tedious work and pays attention to details)
+- watches "Dragon Ball Z" with his nephews & nieces after school
+- used to be a DJ, but just wasn't good anymore
+- took the gym class for school.
+- has grown up reading comic books and sci-fi, and loves to listen to new stuff
+- spent a week in a house made of cardboard and stuff..
+- is a member of the internet music scene
+- was born in Italy (from the first english-speakers in the region, though)
+- is a huge fan of punk, metal, kink, hardcore, black metal, dubstep & gothic rap and is proud of working with them
+- has lived in London, NYC, NY & NYC for 18 months and has a boyfriend with only 4 days to live
+- went to a school with a band called The Sanguinarium & they played like 9:50pm on Saturday night
+- loves art, music & drama
+- gets into and out of all sorts of groups and genres and hates the idea of going somewhere that he knows will be like his home
+- is a gamer who likes to put on more and more plays
 
-In the project directory, you can run:
+# About My Goats:
+Now I'm writing a blog for the next two years that is going to be about the goats and goats of the future of the animal trade and human rights. There would be a blog as well to share the benefits of my goats as well as their plight and the importance of caring for others because they are human beings, I'm posting them when it's needed as well as the benefits because there is little else the way the people around me do. I'm posting to fill the gap left by the years of abuse and neglect and the need for people to care for them as well as what was left in the world out on the streets.
 
-### `yarn start`
+The post will be very simple but I'm sure you already knew about some of the benefits I'm making possible and the importance to them. It's going to make a huge difference to everyone involved to get them better and help them better and keep their lives going for many years.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The people who are making the post have created my blog on behalf of my family. I hope this is something that everyone from you all could read and see, and especially everyone that knows me about the way I look at them and who is interested in trying to become better and the value that is being added by sharing my story and learning
