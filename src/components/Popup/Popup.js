@@ -33,7 +33,6 @@ function PopupWithForm(props) {
     <section className={`popup ${props.isOpen  && 'popup_opened'}`} >
       <div className="popup__container">
       <form className="popup__form" onSubmit={handleSubmit}>
-        <button className="popup__close" type="button" onClick={props.handleClose}>Close</button>  
           <h4 className="popup__title">Create a goat:</h4>
           
           <p className="popup__input-label">Goat name:</p>
@@ -49,6 +48,7 @@ function PopupWithForm(props) {
           <input className="popup__input" type="text" name="activity" value={activity} onChange={handleActivity} placeholder="Enter your goat's favorite activity"></input>
           <br/><br/>
           <button className="popup__submit" type="submit">Send</button>
+          <button className="popup__close" type="button" onClick={props.handleClose}>Close</button>  
       </form>
       </div>
     </section>  
