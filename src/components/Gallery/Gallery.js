@@ -6,7 +6,7 @@ function Gallery(props){
   return(
     <>
     <h2 className="gallery__title">My Goats:</h2>
-    <h4 className="gallery__subtitle">{props.subtitle}</h4>
+    <h4 className="gallery__subtitle">Here are some of my goats. You can add your own goats, too!<br/><br/>{props.subtitle}</h4>
     <ul className="gallery__grid">
       {props.items.length > 0 ? props.items.map((item,index)=>
         <li className="gallery-item" key={index}>

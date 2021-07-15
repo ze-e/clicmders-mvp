@@ -14,8 +14,9 @@ function App() {
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [DATA, setData] = React.useState(Data);
+  const [loading, setLoading] = React.useState(false);
 
-  const [subtitle, setSubtitle] = React.useState('Here are some of my goats. You can add your own goats, too!');
+  const [subtitle, setSubtitle] = React.useState('');
 
   React.useEffect(()=>{
     getSubtitle();
@@ -26,16 +27,18 @@ function App() {
   }
 
   async function submitForm(name, food, activity){
-     getText(`This is my goat. Their name is ${name}. They like to eat ${food} and they love to ${activity}`)
+    setLoading(true);
+    getText(`This is my goat. Their name is ${name}. They like to eat ${food} and they love to ${activity}`)
     .then((resp)=>{
       const newItem = {title:name,description:processText(resp.output,7),img:randomGoatImage()};
       setData([...DATA, newItem]);
+      setLoading(false);
       toggleClose();
     })
   }
 
   async function getSubtitle(){
-    getText(`Here are some of my goats. You can add your own goats, too!`)
+    getText(`The cool thing about goats is`)
    .then((resp)=>{
       setSubtitle(processText(resp.output,3));
    })
@@ -53,7 +56,7 @@ function App() {
     <div className="App">
       <Header />
       <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
-      <Popup isOpen={isOpen} handleClose={toggleClose} handleSubmit={submitForm}/>
+      <Popup isOpen={isOpen} loading={loading} handleClose={toggleClose} handleSubmit={submitForm}/>
       <Gallery items={DATA} subtitle={subtitle}/>
     </div>
   );
