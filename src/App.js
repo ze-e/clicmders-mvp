@@ -19,7 +19,7 @@ function App() {
   function submitForm(name, food, activity){
     getGoatText({name, food, activity})
     .then((resp)=>{
-      const newItem = {name,description:resp.output,img:"https://images.unsplash.com/photo-1588466585717-f8041aec7875"};
+      const newItem = {name, description:resp.output, img:"https://images.unsplash.com/photo-1588466585717-f8041aec7875"};
       setData([...DATA, newItem]);
       toggleClose();
     })
