@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import './components/Gallery';
+import './components/Header';
+import './components/Popup';
+import Data from './data/data.json';
 
 function App() {
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  function toggleClose(){
+    setIsOpen(!isOpen);
+  }
+
+  function submitForm(){
+    toggleClose();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Gallery items={Data}/>
+      <button className="add-button">Add a new goat!</button>
+      <Popup handleClose={toggleClose} isOpen={isOpen} handleClose={submitForm}/>
     </div>
   );
 }
