@@ -1,5 +1,4 @@
 export const GoatPics = [
-  'https://images.unsplash.com/photo-1556314833-b07d6c0505c3',
   'https://images.unsplash.com/photo-1573578160998-4f4c7b023aec',
   'https://images.unsplash.com/photo-1557431177-d277c24390e5',
   'https://images.unsplash.com/photo-1603241286521-2227e504e37d',
