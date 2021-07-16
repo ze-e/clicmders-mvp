@@ -1,7 +1,7 @@
 ## Terry's goat blog
 
 # Link to the App
-View the Goat Blog live [here](https://github.com/ze-e/clicmders-mvp/settings/pages)
+View the Goat Blog live [here](https://ze-e.github.io/clicmders-mvp/)
 
 # About Me:
 Hi! I'm Terry. Here's a few cool facts about me:
