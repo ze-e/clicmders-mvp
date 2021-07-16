@@ -4,7 +4,7 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 function Gallery(props){
 
   return(
-    <>
+    <section className="gallery">
     <h2 className="gallery__title">My Goats:</h2>
     <h4 className="gallery__subtitle">Here are some of my goats. You can add your own goats, too!
       <br/><br/>
@@ -17,7 +17,7 @@ function Gallery(props){
         </li>
       ):<p className="gallery__loading">Loading goats . . . </p>}
    </ul> 
-    </>
+    </section>
   )
 }
 

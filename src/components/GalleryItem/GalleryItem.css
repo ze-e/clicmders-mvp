@@ -1,6 +1,13 @@
+.gallery-item{
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(8, 130, 255, 0.2);
+  padding: 14px;
+  box-sizing: border-box;
+}
+
 .gallery-item__img{
   width: 400px;
-  height: 400px;
+  height: 400px; 
 }
 
 .gallery-item__img-container{

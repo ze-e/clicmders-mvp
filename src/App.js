@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <button className="add-button" onClick={toggleClose}>Add a new goat!</button>
+      {!isOpen && <button className="add-button" onClick={toggleClose}>Add a new goat!</button>}
       <Popup isOpen={isOpen} loading={loading} handleClose={toggleClose} handleSubmit={submitForm}/>
       <Gallery items={DATA} subtitle={subtitle}/>
     </div>
