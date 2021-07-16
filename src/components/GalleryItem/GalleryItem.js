@@ -5,7 +5,9 @@ function GalleryItem(props){
   return(
     <>
       <h3 className="gallery-item__title">{my.title}</h3>
-      <img className="gallery-item__img" src={my.img} />
+      <div className="gallery-item__img-container">
+        <img className="gallery-item__img" src={my.img} />
+      </div>
       <p className="gallery-item__description">{my.description}</p>
     </>
   )

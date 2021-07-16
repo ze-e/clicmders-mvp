@@ -1,4 +1,8 @@
 .gallery-item__img{
-  width: 282px;
-  height: 282px;
+  width: 400px;
+  height: 400px;
+}
+
+.gallery-item__img-container{
+  text-align: center;
 }
