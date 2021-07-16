@@ -11,7 +11,7 @@ import {GoatPics} from './data/goatPics';
 function App() {
 
   const [isOpen, setIsOpen] = React.useState(false);
-  const [DATA, setData] = React.useState(Data);
+  const [data, setData] = React.useState(Data);
   const [loading, setLoading] = React.useState(false);
 
   const [subtitle, setSubtitle] = React.useState('');
@@ -29,7 +29,7 @@ function App() {
     getText(`This is my goat. Their name is ${name}. They like to eat ${food} and they love to ${activity}`)
     .then((resp)=>{
       const newItem = {title:name,description:processText(resp.output,7),img:randomGoatImage()};
-      setData([...DATA, newItem]);
+      setData([...data, newItem]);
       setLoading(false);
       toggleClose();
     })
@@ -55,7 +55,7 @@ function App() {
       <Header />
       {!isOpen && <button className="add-button" onClick={toggleClose}>Add a new goat!</button>}
       <Popup isOpen={isOpen} loading={loading} handleClose={toggleClose} handleSubmit={submitForm}/>
-      <Gallery items={DATA} subtitle={subtitle}/>
+      <Gallery items={data} subtitle={subtitle}/>
     </div>
   );
 }

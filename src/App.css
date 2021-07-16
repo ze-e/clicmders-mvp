@@ -15,4 +15,11 @@
   text-align: center;
   align-self: center;
   font-size: 20px;
+  border-radius: 20px;
+}
+.add-button:hover{
+  cursor: pointer;
+  background-color: rgb(163, 122, 122);
+  transition: 600ms;
+  
 }
